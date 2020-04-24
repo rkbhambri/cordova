@@ -1,0 +1,10 @@
+
+.engage{
+    height: 90%;
+    color:#ccc;
+}
+
+.engage .toggle-icon {
+    height : 80px;
+    width: 80px;
+}

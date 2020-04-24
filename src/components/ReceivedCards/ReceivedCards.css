@@ -1,0 +1,9 @@
+
+.received-cards {
+    background: #181b26;
+}
+
+.received-cards .ui.header{
+    color: #fff;
+    font-size: 25px;
+}

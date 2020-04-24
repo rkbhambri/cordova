@@ -1,0 +1,15 @@
+
+.share-card-details .share-info{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.share-card-details .buttons .ui.button {
+    border-radius: 1.3em;
+    background: #121212;
+    color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+    .share-card-details  { width: 70% !important;}
+}
