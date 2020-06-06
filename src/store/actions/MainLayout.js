@@ -13,7 +13,7 @@ export const updateUserLocation = (location) => {
     return dispatch => {
         axios.put(updateUserLocationUrl(), location)
             .then(response => {
-
+                dispatch(setSnackbarMessage('location set successfully'))
             })
             .catch(error => {
 

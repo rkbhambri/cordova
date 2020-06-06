@@ -28,6 +28,9 @@
     <feature name="LocalNotification">
         <param name="ios-package" value="APPLocalNotification" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <name>react-cordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

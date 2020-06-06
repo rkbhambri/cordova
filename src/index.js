@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import * as serviceWorker from './serviceWorker';
+// import * as serviceWorker from './serviceWorker';
 import App from './App';
 import Auth from './store/reducers/Auth';
 import Home from './store/reducers/Home';
@@ -49,16 +49,16 @@ const store = createStore(rootReducer, composeEnhancers(
 ));
 
 /*
- * Wrapping the main app with BrowserRouter (provides routing and helps us navigate through project)
+ * Wrapping the main app with HashRouter (provides routing and helps us navigate through project)
  * Provider is a part of Redux which is needed in order to get access to store throughout our project 
  */
 const app = (
     <Provider store={store}>
-        <BrowserRouter basename={getBasename()}>
+        <HashRouter basename={getBasename()}>
             <App />
-        </BrowserRouter>
+        </HashRouter>
     </Provider>
 )
 
 ReactDOM.render(app, document.getElementById('root'));
-serviceWorker.register();
+// serviceWorker.register();

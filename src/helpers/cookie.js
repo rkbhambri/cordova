@@ -5,26 +5,34 @@ const cookies = new Cookies();
 
 export const getItem = (key) => {
     let meta = null;
-    if (isAndroid()) {
-        const auth = JSON.parse(localStorage.getItem('auth'));
-        if (auth && auth.hasOwnProperty(key)) {
-            meta = auth[key];
-        } else {
-            meta = JSON.parse(localStorage.getItem(key));
-        }
+    console.log('==meta===', meta, '===', localStorage.getItem('token'));
+    const auth = JSON.parse(localStorage.getItem('auth'));
+    if (auth && auth.hasOwnProperty(key)) {
+        meta = auth[key];
     } else {
-        const auth = cookies.get('auth');
-        if (auth && auth.hasOwnProperty(key)) {
-            meta = auth[key];
-        } else {
-            meta = cookies.get(key);
-        }
+        meta = JSON.parse(localStorage.getItem(key));
     }
+    // if (isAndroid()) {
+    //     const auth = JSON.parse(localStorage.getItem('auth'));
+    //     if (auth && auth.hasOwnProperty(key)) {
+    //         meta = auth[key];
+    //     } else {
+    //         meta = JSON.parse(localStorage.getItem(key));
+    //     }
+    // } else {
+    //     const auth = cookies.get('auth');
+    //     if (auth && auth.hasOwnProperty(key)) {
+    //         meta = auth[key];
+    //     } else {
+    //         meta = cookies.get(key);
+    //     }
+    // }
     return meta;
 };
 
 export const setItem = (key, value) => {
-    isAndroid() ? localStorage.setItem(key, JSON.stringify(value)) : cookies.set(key, value, { path: '/' });
+    localStorage.setItem(key, JSON.stringify(value))
+    // isAndroid() ? localStorage.setItem(key, JSON.stringify(value)) : cookies.set(key, value, { path: '/' });
 };
 
 export const removeItem = (key) => {
@@ -32,13 +40,14 @@ export const removeItem = (key) => {
 };
 
 export const clearItems = () => {
-    if (isAndroid()) {
-        localStorage.clear();
-    } else {
-        const allCookies = cookies.getAll();
-        for (let key in allCookies) {
-            cookies.remove(key, { path: '/' });
-        }
-    }
+    localStorage.clear();
+    // if (isAndroid()) {
+    //     localStorage.clear();
+    // } else {
+    //     const allCookies = cookies.getAll();
+    //     for (let key in allCookies) {
+    //         cookies.remove(key, { path: '/' });
+    //     }
+    // }
 };
 

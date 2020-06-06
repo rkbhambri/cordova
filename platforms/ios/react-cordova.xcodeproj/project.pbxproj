@@ -23,6 +23,7 @@
 		5EFB6BC0D6084A6A858E7E57 /* UNNotificationRequest+APPLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A7A275ECA24C83967E797F /* UNNotificationRequest+APPLocalNotification.m */; };
 		4C9FBC10A2994ABD97A31A8C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54EF33B2429E4AE6852368D7 /* UserNotifications.framework */; };
 		F9DEB68BEF9E404CA58106CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF7411613814A26B4B69FD7 /* CoreLocation.framework */; };
+		3B6E00D1283F464F834C903D /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 32403CE9A15241FCAC703873 /* CDVLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		98E64F65FCC94030A6F24EAD /* UNNotificationRequest+APPLocalNotification.h */ = {isa = PBXFileReference; name = "UNNotificationRequest+APPLocalNotification.h"; path = "cordova-plugin-local-notification/UNNotificationRequest+APPLocalNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		54EF33B2429E4AE6852368D7 /* UserNotifications.framework */ = {isa = PBXFileReference; name = "UserNotifications.framework"; path = "System/Library/Frameworks/UserNotifications.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		AEF7411613814A26B4B69FD7 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		32403CE9A15241FCAC703873 /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E082E6F1DBB04CD0A685CA1D /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 				24957D3975D7489980DAE049 /* APPNotificationOptions.h */,
 				CD33EE2DE34844EA8A516135 /* UNUserNotificationCenter+APPLocalNotification.h */,
 				98E64F65FCC94030A6F24EAD /* UNNotificationRequest+APPLocalNotification.h */,
+				32403CE9A15241FCAC703873 /* CDVLocation.m */,
+				E082E6F1DBB04CD0A685CA1D /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = "react-cordova/Plugins";
@@ -339,6 +344,7 @@
 				1A4FFC0B4E84478F96EA356F /* APPNotificationOptions.m in Sources */,
 				DEE3FA767D8D4F55B3D63EFA /* UNUserNotificationCenter+APPLocalNotification.m in Sources */,
 				5EFB6BC0D6084A6A858E7E57 /* UNNotificationRequest+APPLocalNotification.m in Sources */,
+				3B6E00D1283F464F834C903D /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -52,6 +52,7 @@ export const login = (loginDetails) => {
                         id: response.data.entity.id,
                         role: response.data.entity.roles
                     }
+                    console.log('==auth===', auth);
                     setItem('auth', auth);
                     dispatch(authSuccess(response.data.entity));
                 } else {
